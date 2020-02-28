@@ -1,14 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import StockChart from "./components/StockChart";
+import StackChart from "./components/StackChart";
 import LineChart from "./components/LineChart";
+import BarAndLineChart from "./components/BarAndLineChart";
+import AreaChart from "./components/AreaChart";
 
 function App() {
   return (
     <div className="App">
-      <StockChart />
+      <BarAndLineChart />
+      <StackChart />
       <LineChart />
+      <AreaChart />
     </div>
   );
 }

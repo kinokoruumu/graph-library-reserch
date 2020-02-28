@@ -72,8 +72,8 @@ const options: Options = {
   ]
 };
 
-const StockChart = () => (
+const StackChart = () => (
   <HighchartsReact highcharts={Highcharts} options={options} />
 );
 
-export default StockChart;
+export default StackChart;

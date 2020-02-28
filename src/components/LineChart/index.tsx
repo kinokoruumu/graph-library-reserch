@@ -10,17 +10,10 @@ const options: Options = {
   chart: {
     zoomType: "x"
   },
-
   title: {
     text: "Solar Employment Growth by Sector, 2010-2016"
   },
-
-  subtitle: {
-    text: "Source: thesolarfoundation.com"
-  },
-
   colors: ["#03348D", "#0864D1", "#0B82F4", "#6AC3FB", "#9CDDFD", "#CDF0FE"],
-
   yAxis: {
     title: {
       text: "Number of Employees"
@@ -33,7 +26,6 @@ const options: Options = {
     padding: 10,
     width: "100%"
   },
-
   plotOptions: {
     series: {
       label: {
@@ -42,7 +34,6 @@ const options: Options = {
       pointStart: 2010
     }
   },
-
   series: [
     {
       type: "line", // ?
@@ -70,24 +61,6 @@ const options: Options = {
       data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
     }
   ],
-
-  responsive: {
-    rules: [
-      {
-        condition: {
-          maxWidth: 500
-        },
-        chartOptions: {
-          legend: {
-            layout: "horizontal",
-            align: "center",
-            verticalAlign: "bottom"
-          }
-        }
-      }
-    ]
-  },
-
   credits: {
     enabled: false
   }
