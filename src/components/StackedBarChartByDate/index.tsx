@@ -7,6 +7,48 @@ const options: Options = {
   credits: {
     enabled: false
   },
+  rangeSelector: {
+    verticalAlign: "top",
+    buttonPosition: {
+      align: "center"
+    },
+    inputEnabled: false,
+    buttonTheme: {
+      // styles for the buttons
+      fill: "none",
+      stroke: "none",
+      "stroke-width": 0,
+      r: 8,
+      style: {
+        color: "#039",
+        fontWeight: "bold"
+      },
+      states: {
+        hover: {},
+        select: {
+          fill: "#039",
+          style: {
+            color: "white"
+          }
+        }
+        // disabled: { ... }
+      }
+    },
+    selected: 1,
+    enabled: true,
+    buttons: [
+      {
+        type: "month",
+        text: "6m",
+        count: 6
+      },
+      {
+        type: "year",
+        text: "1y",
+        count: 1
+      }
+    ]
+  },
   chart: {
     type: "column",
     zoomType: "x"
