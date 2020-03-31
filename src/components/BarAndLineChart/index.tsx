@@ -1,5 +1,5 @@
 import React from "react";
-import Highcharts, { Options } from "highcharts/highstock";
+import Highcharts, { Options } from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const options: Options = {

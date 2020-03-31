@@ -1,25 +1,30 @@
 import React from "react";
-import Highcharts, { Options } from "highcharts/highstock";
+import Highcharts, { Options } from "highcharts";
+import HighChartsExporting from "highcharts/modules/exporting";
 import HighchartsReact from "highcharts-react-official";
+HighChartsExporting(Highcharts);
 
 const options: Options = {
+  exporting: {
+    csv: {},
+  },
   credits: {
-    enabled: false
+    enabled: false,
   },
   chart: {
-    type: "column"
+    type: "column",
   },
   title: {
-    text: "Stacked column chart"
+    text: "Stacked column chart",
   },
   colors: ["#03348D", "#0864D1", "#0B82F4", "#6AC3FB", "#9CDDFD", "#CDF0FE"],
   xAxis: {
-    categories: ["Apples", "Oranges", "Pears", "Grapes", "Bananas"]
+    categories: ["Apples", "Oranges", "Pears", "Grapes", "Bananas"],
   },
   yAxis: {
     min: 0,
     title: {
-      text: "Total fruit consumption"
+      text: "Total fruit consumption",
     },
     stackLabels: {
       enabled: true,
@@ -29,51 +34,55 @@ const options: Options = {
           // theme
           (Highcharts.defaultOptions.title?.style &&
             Highcharts.defaultOptions.title?.style.color) ||
-          "gray"
-      }
-    }
+          "gray",
+      },
+    },
   },
   legend: {
     align: "left",
     backgroundColor: "#F5F7F8",
     padding: 10,
     symbolRadius: 0,
-    width: "100%"
+    width: "100%",
   },
   tooltip: {
     headerFormat: "<b>{point.x}</b><br/>",
-    pointFormat: "{series.name}: {point.y}<br/>Total: {point.stackTotal}"
+    pointFormat: "{series.name}: {point.y}<br/>Total: {point.stackTotal}",
   },
   plotOptions: {
     column: {
       stacking: "normal",
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
-      borderWidth: 0
-    }
+      borderWidth: 0,
+    },
   },
   series: [
     {
       type: "column",
       name: "John",
-      data: [5, 3, 4, 7, 2]
+      data: [5, 3, 4, 7, 2],
     },
     {
       type: "column",
       name: "Jane",
-      data: [2, 2, 3, 2, 1]
+      data: [2, 2, 3, 2, 1],
     },
     {
       type: "column",
       name: "Joe",
-      data: [3, 4, 4, 2, 5]
-    }
-  ]
+      data: [3, 4, 4, 2, 5],
+    },
+  ],
 };
 
-const StackChart = () => (
-  <HighchartsReact highcharts={Highcharts} options={options} />
-);
+const StackChart: React.FunctionComponent = () => {
+  return (
+    <>
+      <HighchartsReact highcharts={Highcharts} options={options} />
+    </>
+  );
+};
 
 export default StackChart;
