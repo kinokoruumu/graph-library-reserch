@@ -12,7 +12,7 @@
     "@types/react-dom": "^16.9.0",
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
-    "dayjs": "^1.8.21",
+    "dayjs": "^1.8.23",
     "highcharts": "^8.0.0",
     "highcharts-react-official": "^3.0.0",
     "react": "^16.13.0",
